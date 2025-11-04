@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.users-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 4rem 1rem;
+    background: #999;
+}
