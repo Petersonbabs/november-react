@@ -3,8 +3,19 @@
 // functions, states, variables
 
 const Button = ({ text = "Click me", onButtonClick }) => {
-    const handleSubmit = () => {
-        alert("Button clicked!")
+    const getProducts = async () => {
+        try {
+            // const res = await fetch("http://localhost:5000/products", {
+            //     method: "GET",
+            //     body: JSON.stringify({}),
+            //     headers: {
+            //         "Content-Type": "application/json"
+            //     }
+            // })
+            // const data = await res.blob()
+        } catch (error) {
+
+        }
     }
     return (
         <button style={{
