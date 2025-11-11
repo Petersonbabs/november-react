@@ -5,19 +5,21 @@ import UsersList from "./components/UsersList"
 import Hero from "./components/Ui/Hero"
 import StateManagement from "./components/Ui/StateManagement"
 import FeaturedProducts from "./components/Ui/FeaturedProducts"
+import Hooks from "./components/Ui/Hooks"
 
 // conditional rednering
-
 // state management
+// Hooks
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Hero />
       <FeaturedProducts />
-      <UsersList />
+      <UsersList /> */}
       {/* <StateManagement /> */}
+      <Hooks />
     </>
   )
 }
