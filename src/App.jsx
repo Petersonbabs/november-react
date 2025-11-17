@@ -24,8 +24,8 @@ import DashboardLayout from "./components/layouts/DashboardLayout"
 function App() {
   return (
     <>
-      <BrowserRouter>
-        {/* <Header /> */}
+      {/* <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/products" element={<Productpage />} />
@@ -34,14 +34,14 @@ function App() {
 
           <Route path="*" element={<NotFOuntPage />} />
         </Routes>
-        {/* <Footer /> */}
-      </BrowserRouter>
+        <Footer />
+      </BrowserRouter> */}
 
       {/* <Hero />
       <FeaturedProducts />
       <UsersList /> */}
       {/* <StateManagement /> */}
-      {/* <Hooks /> */}
+      <Hooks />
     </>
   )
 }
