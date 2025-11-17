@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Button from "./Ui/Button"
 
 const Header = () => {
@@ -20,15 +21,16 @@ const Header = () => {
                 alignItems: "center",
 
             }}>
-                <a style={{
+                <Link style={{
                     textDecoration: "none"
-                }} href="#">Home</a>
-                <a style={{
+                }} to="/">Home</Link>
+                <Link style={{
                     textDecoration: "none"
-                }} href="#">Home</a>
-                <a style={{
+                }} to="/products">Products</Link>
+                <Link style={{
                     textDecoration: "none"
-                }} href="#">Home</a>
+                }} to="/dashboard">Dashboard</Link>
+
             </div>
             <Button onButtonClick={handleSignup} />
         </header>

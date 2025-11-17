@@ -8,7 +8,6 @@ const useProduct = () => {
     const [loading, setLoading] = useState(false)
 
     const getSingleProduct = () => {
-        alert(JSON.stringify(singleProduct))
     }
     return {
         singleProduct,

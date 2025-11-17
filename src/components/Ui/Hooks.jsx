@@ -86,7 +86,6 @@ const Hooks = () => {
     useEffect(() => {
         fetchProducts()
         getSingleProduct()
-        console.log(singleProduct)
     }, [searchQuery, filter])
 
     const fetchProducts = () => {

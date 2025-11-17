@@ -42,3 +42,8 @@
     border: 1px solid #666;
     border-radius: 8px;
 }
+
+
+.page {
+    min-height: 60vh;
+}
