@@ -1,30 +1,39 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, Route, Routes, useNavigate } from 'react-router-dom'
+import Sidebar from '../Ui/Sidebar'
 import Dashboard from '../../pages/dashboard/DashboardIndex'
 import OrdersPage from '../../pages/dashboard/OrdersPage'
-import Profile from '../../pages/dashboard/Profile'
-import Analytics from '../../pages/dashboard/Analytics'
 
 const DashboardLayout = () => {
+    const auth = localStorage.getItem("auth_token")
+    const navigate = useNavigate()
+    useEffect(() => {
+        if (!auth) {
+            navigate("/login")
+        } 
+    }, [])
     return (
-        <div >
-            <nav className='h-16  bg-black text-white flex items-center'>Dashboard layout</nav>
-            <aside className='bg-black text-white fixed left-0  h-full  w-1/5'>
-                <ul className='p-8 space-y-4 block bg-black h-full pl-8 pt-4'>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                </ul>
-            </aside>
-            <Routes>
-                <Route path='/' element={<Dashboard />} />
-                <Route path='/orders' element={<OrdersPage />} />
-                <Route path='/profile' element={<Profile />} />
-                <Route path='/analytics' element={<Analytics />} />
-            </Routes>
-            <h1>Footer</h1>
+        <div>
+            <header className='bg-black'>
+                <nav className='flex  text-white justify-between items-center h-12 max-w-[1140px] m-auto'>
+                    <Link to="/"> <h2>Logo</h2></Link>
+                    <ul className='flex items-center gap-4 mr-8'>
+                        <Link to="/dashboard/">Overview</Link>
+                        <Link to="/dashboard/orders">Orders</Link>
+                        <Link to="/dashboard/analytics">Analytics</Link>
+                        <Link to="/dashboard/profile" className='flex items-center justify-center h-10 w-10 rounded-full'>
+                            <img src='https://hips.hearstapps.com/hmg-prod/images/elon-musk-gettyimages-2147789844-web-675b2c17301ea.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=1400:*' className='h-full w-full object-fit rounded-full' />
+                        </Link>
+                    </ul>
+                </nav>
+            </header>
+            <section className='flex gap-4'>
+                <Sidebar />
+                <Routes>
+                    <Route path='/' element={<Dashboard />} />
+                    <Route path='/orders' element={<OrdersPage />} />
+                </Routes>
+            </section>
         </div>
     )
 }

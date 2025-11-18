@@ -14,37 +14,44 @@ import NotFOuntPage from "./pages/NotFOuntPage"
 import ProductDetail from "./pages/ProductDetail"
 import Footer from "./components/Footer"
 import DashboardLayout from "./components/layouts/DashboardLayout"
+import PublicPagesLayout from "./components/layouts/PublicPagesLayout"
 
 // conditional rednering
 // state management
 // Hooks
 
+// provider component 
 // layout component
+// shared component
 
 function App() {
   return (
     <>
-      {/* <BrowserRouter>
-        <Header />
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/products" element={<Productpage />} />
+          <Route path="/*" element={<PublicPagesLayout />} />
           <Route path="/dashboard/*" element={<DashboardLayout />} />
-          <Route path="/products/:id" element={<ProductDetail />} />
-
-          <Route path="*" element={<NotFOuntPage />} />
         </Routes>
-        <Footer />
-      </BrowserRouter> */}
+      </BrowserRouter>
 
+      {/* <Header />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/products" element={<Productpage />} />
+        <Route path="/dashboard/*" element={<DashboardLayout />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+
+        <Route path="*" element={<NotFOuntPage />} />
+      </Routes>
+      <Footer /> */}
       {/* <Hero />
       <FeaturedProducts />
       <UsersList /> */}
       {/* <StateManagement /> */}
-      <Hooks />
+      {/* <Hooks /> */}
     </>
   )
 }
 
-export default App 
+export default App
 
