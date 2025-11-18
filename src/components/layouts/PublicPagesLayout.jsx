@@ -9,7 +9,7 @@ import LoginPage from '../../pages/Login'
 const PublicPagesLayout = () => {
     return (
         <div>
-            <header className='bg-gray-700'>
+            <header className='bg-gray-700 py-4'>
                 <nav className='flex  text-white justify-between items-center h-12 max-w-[1140px] m-auto'>
                     <h2>Logo</h2>
                     <ul className='flex items-center gap-4 mr-8'>
