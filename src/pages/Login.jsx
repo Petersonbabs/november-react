@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const LoginPage= () => {
+const LoginPage = () => {
   const navigate = useNavigate(); // windw.location.href = "/"
 
   const [email, setEmail] = useState("");
@@ -23,13 +23,10 @@ const LoginPage= () => {
     e.preventDefault();
     setLoading(true);
 
-    // Fake API delay
-    setTimeout(() => {
-      const token = generateToken();
-      localStorage.setItem("auth_token", token);
-
-      navigate("/dashboard");
-    }, 1200);
+    // ASSIGNMENT
+    // make request to the login endpoint and send the login formdat in the body
+    // save the returnd token to local Sorage
+    // redirect to dashboard page 
   };
 
   return (

@@ -5,6 +5,7 @@ import Productpage from '../../pages/Productpage'
 import ProductDetail from '../../pages/ProductDetail'
 import NotFOuntPage from '../../pages/NotFOuntPage'
 import LoginPage from '../../pages/Login'
+import Signup from '../../pages/Signup'
 
 const PublicPagesLayout = () => {
     return (
@@ -16,6 +17,7 @@ const PublicPagesLayout = () => {
                         <Link to="/">Hom</Link>
                         <Link to="/products">Products</Link>
                         <Link to="/login">Login</Link>
+                        <Link to="/signup">Sign up</Link>
                         <Link to="/dashboard" className='flex items-center justify-center h-10 w-10 rounded-full'>
                             <img src='https://hips.hearstapps.com/hmg-prod/images/elon-musk-gettyimages-2147789844-web-675b2c17301ea.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=1400:*' className='h-full w-full object-fit rounded-full' />
                         </Link>
@@ -28,6 +30,7 @@ const PublicPagesLayout = () => {
                 <Route path='/products' element={<Productpage />} />
                 <Route path='/products/:id' element={<ProductDetail />} />
                 <Route path='/login' element={<LoginPage />} />
+                <Route path='/signup' element={<Signup />} />
                 <Route path='*' element={<NotFOuntPage />} />
             </Routes>
         </div>
