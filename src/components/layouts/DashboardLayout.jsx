@@ -3,6 +3,7 @@ import { Link, Route, Routes, useNavigate } from 'react-router-dom'
 import Sidebar from '../Ui/Sidebar'
 import Dashboard from '../../pages/dashboard/DashboardIndex'
 import OrdersPage from '../../pages/dashboard/OrdersPage'
+import AddProduct from '../../pages/dashboard/AddProduct'
 
 const DashboardLayout = () => {
     const auth = localStorage.getItem("auth_token")
@@ -10,7 +11,7 @@ const DashboardLayout = () => {
     useEffect(() => {
         if (!auth) {
             navigate("/login")
-        } 
+        }
     }, [])
     return (
         <div>
@@ -32,6 +33,7 @@ const DashboardLayout = () => {
                 <Routes>
                     <Route path='/' element={<Dashboard />} />
                     <Route path='/orders' element={<OrdersPage />} />
+                    <Route path='/add-product' element={<AddProduct />} />
                 </Routes>
             </section>
         </div>

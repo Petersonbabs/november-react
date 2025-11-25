@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Sidebar = () => {
     const navigate = useNavigate()
@@ -9,12 +9,13 @@ const Sidebar = () => {
     }
     return (
         <aside className='bg-black text-white h-screen p-4 w-[25%]'>
-            <ul>
+            <ul className=''>
                 <li>Dashboard</li>
                 <li>My Ordersx</li>
+                <Link to="/dashboard/add-product">Add product</Link>
 
-                <button onClick={logout}>Logout</button>
             </ul>
+                <button onClick={logout}>Logout</button>
         </aside>
     )
 }
